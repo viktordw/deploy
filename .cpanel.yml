@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/viktorpr/public_html
+#    - rm $DEPLOYPATH/index.php
+#    - cp index.php $DEPLOYPATH
+    - ./test.sh
+    
