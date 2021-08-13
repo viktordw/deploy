@@ -1,5 +1,7 @@
 #!/bin/bash
 
-#touch $DEPLOYPATH/test.txt
+$path='/home/viktorpr/public_html/'
 
-touch /home/viktorpr/public_html/test.txt
+rm ${path}test.txt
+# touch /home/viktorpr/public_html/test.txt
+cp ${path}index.html
