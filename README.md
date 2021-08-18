@@ -1,3 +1,3 @@
 # README
 
-ne radi pokretanje spoljnih skripti
+Pokretanje spoljnih skripti ne radi
