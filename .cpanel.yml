@@ -1,7 +1,11 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/viktorpr/public_html
-    - rm $DEPLOYPATH/index.html
-    - cp index.html $DEPLOYPATH
-    - ./test.sh
+    - DEPLOYPATH="/home/$USER/public_html"
+    - TEMPDIR="/home/$USER/tmp/public_html"
+    - REPOPATH="/home/${USER}/repositories"
+    - rm -r $TEMPDIR; mkdir $TEMPDIR
+    - cp -r ${DEPLOYPATH}/.well-known ${TEMPDIR}/.well-known
+    - cp -r ${DEPLOYPATH}/cgi-bin ${TEMPDIR}/cgi-bin
+    - cp -r ${DEPLOYPATH}/index.phtml ${TEMPDIR}/index.phtml
+    - cp -r ${REPOPATH}/sajt-git/. ${DEPLOYPATH}/*
